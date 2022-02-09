@@ -1,33 +1,62 @@
-from config import PATHS, MAX_PLAYLISTS_FOR_FREE_ACC, logging, FREE
+from config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
+from core.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
+    UserNotAllowedToAddMorePlaylists
 from core.models import write, read
 
 
-class User:
-    @staticmethod
-    def authenticate(username, func):
-        def wrapper(name: str):
-            if self.user['type'] == FREE and len(self.user['playlists']) == MAX_PLAYLISTS_FOR_FREE_ACC:
-                logging.info('User is not allowed to create more playlists')
-            else:
-                func(name)
+def _get_user(func):
+    def wrapper(username: str, *args):
+        user = read(PATHS['users']).get(username)
+        user['username'] = username
+        func(user, *args)
 
-        return wrapper
+    return wrapper
 
-    @staticmethod
-    @authenticate
-    def create_playlist(name: str):
-        if self.user['playlists'].get(name):
-            logging.info('{username} tried to create a playlist that exists'.format(username=self.user))
+
+def _create_playlist_wrapper(func):
+    def wrapper(user: dict, playlist_name):
+        if user['type'] == FREE and len(user['playlists'][playlist_name]) == MAX_PLAYLISTS_FOR_FREE_ACC:
+            raise UserNotAllowedToAddMorePlaylists()
         else:
-            self.user['playlists'][name] = []
+            func(user, playlist_name)
 
-    @staticmethod
-    def add_track_to_playlist(playlist_name, track_id):
-        pass
+    return wrapper
 
-    def update_user(user: dict):
-        write(PATHS['users'], user, 'username')
 
-    @staticmethod
-    def get_user(username):
-        return read([PATHS.read])
+def _add_track_wrapper(func):
+    def wrapper(user: dict, *args):
+        if user['type'] == FREE and len(user['playlists']) == MAX_PLAYLIST_TRACKS_FOR_FREE_ACC:
+            raise UserNotAllowedToAddMoreTracksToPlaylist()
+        else:
+            func(user, *args)
+
+    return wrapper
+
+
+@_get_user
+@_create_playlist_wrapper
+def create_playlist(user: dict, playlist_name: str):
+    if user['playlists'].get(playlist_name) is not None:
+        logging.warning("Playlist exists")
+        raise PlaylistsExists()
+    else:
+        user['playlists'][playlist_name] = []
+        update_user(user)
+        logging.info('Added playlist successfully')
+
+
+@_get_user
+def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
+    if user['playlists'].get(playlist_name):
+        user['playlists'][playlist_name].append(track_id)
+        update_user(user)
+        logging.info('Added track successfully')
+    else:
+        raise PlaylistDoesNotExists()
+
+
+def update_user(user: dict):
+    write(PATHS['users'], user, 'username')
+
+
+create_playlist("asdbdsa", "13")

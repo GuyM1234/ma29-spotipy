@@ -3,16 +3,11 @@ import os
 from config import PATHS, FREE, logging, MAX_PLAYLISTS_FOR_FREE_ACC
 from core.storage.readers import json_reader
 from core.storage.writers import json_writer
-from core.user import User
 
 
 def _add_doc_to_collection(path: str, doc: dict, id_field_name):
     collection = json_reader(path)
-    if collection.get(doc[id_field_name]):
-        logging.warning("Failed to add document {id}, exists in file {path}".format(id=doc[id_field_name], path=path))
-    else:
-        collection[doc.pop(id_field_name)] = doc
-        logging.info("Document added")
+    collection[doc.pop(id_field_name)] = doc
     return collection
 
 
@@ -39,7 +34,7 @@ def login(username: str, password: str):
     users = read(PATHS['users'])
     if users.get(username) and users.get(username)['password'] == password:
         logging.info(f'{username} logged in successfully'.format(username=username))
-        return User(users.get(username))
+        return True
     logging.info(f'{username} failed to log in'.format(username=username))
     return False
 
