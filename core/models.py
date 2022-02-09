@@ -1,8 +1,9 @@
 import os
 
-from config import PATHS, FREE, logging
+from config import PATHS, FREE, logging, MAX_PLAYLISTS_FOR_FREE_ACC
 from core.storage.readers import json_reader
 from core.storage.writers import json_writer
+from core.user import User
 
 
 def _add_doc_to_collection(path: str, doc: dict, id_field_name):
@@ -41,6 +42,7 @@ def login(username: str, password: str):
         return User(users.get(username))
     logging.info(f'{username} failed to log in'.format(username=username))
     return False
+
 
 
 
