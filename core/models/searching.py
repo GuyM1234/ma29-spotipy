@@ -1,15 +1,27 @@
 from operator import itemgetter
 
-from config import PATHS
-from core.models import read
+from core.config import PATHS, FREE
+from core.models.models import read
+from core.models.user import get_user
 
 
+def authenticate(func):
+    def wrapper(username):
+        result = func()
+        return list(result)[0:5] if get_user(username)['type'] == FREE else result
+
+    return wrapper
+
+
+@authenticate
 def get_artists():
     tracks = read(PATHS['tracks'])
     artists = set()
     for track in tracks.values():
         for artist in track['artists']:
             artists.add(artist['name'])
+
+    return artists
 
 
 def get_artist_album(artist_id: str):
