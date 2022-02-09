@@ -1,0 +1,3 @@
+INFO:root:user created
+WARNING:root:Document asdbdsa exists in file C:\Users\user\Desktop\Code\ma29-spotipy\db\users.json
+INFO:root:asdbdsa logged in successfully
