@@ -11,7 +11,7 @@ def _add_doc_to_collection(path: str, doc: dict, id_field_name):
     return collection
 
 
-def read(file_path: str, reader=json_reader):
+def read(file_path: str, reader: object = json_reader) -> dict:
     return reader(file_path)
 
 
