@@ -1,21 +1,20 @@
-from config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
+from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
 from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
     UserNotAllowedToAddMorePlaylists
-from core.models import write, read
+from core.models.models import write, read
 
 
 def _get_user(func):
     def wrapper(username: str, *args):
         user = read(PATHS['users']).get(username)
         user['username'] = username
-        func(user, *args)
+        return func(user, *args)
 
     return wrapper
 
 
 @_get_user
 def get_user(user: dict):
-    print(user)
     return user
 
 
@@ -74,5 +73,6 @@ def signup(username: str, password: str, user_type=FREE):
     write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
 
 
-def _update_user(user: dict):
+def update_user(user: dict):
     write(PATHS['users'], user, 'username')
+

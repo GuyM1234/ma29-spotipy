@@ -1,5 +1,5 @@
 import os
-from config import PATHS, logging
+from core.config import PATHS, logging
 from core.storage.readers import json_reader
 from core.storage.writers import json_writer
 
@@ -23,10 +23,3 @@ def add_songs_folder():
     for song_path in os.listdir(PATHS['new_songs']):
         write(PATHS['tracks'], read(PATHS['new_songs'] + "\\" + song_path))
         logging.info("tracks uploaded")
-
-
-
-
-
-
-
