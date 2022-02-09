@@ -1,33 +1,61 @@
-# Import the necessary packages
 from consolemenu import *
 from consolemenu.items import *
 
-# Create the menu
-menu = ConsoleMenu("Title", "Subtitle")
+from core.searching import get_best_artist_songs
+from core.user import signup, login, get_user, create_playlist, add_track_to_playlist
 
-# Create some items
 
-# MenuItem is the base class for all items, it doesn't do anything when selected
-menu_item = MenuItem("Menu Item")
+def signup_menu():
+    username = input("Enter user name")
+    password = input("Enter password name")
+    signup(username, password)
 
-# A FunctionItem runs a Python function when selected
-function_item = FunctionItem("Call a Python function", input, ["Enter an input"])
 
-# A CommandItem runs a console command
-command_item = CommandItem("Run a console command",  "touch hello.txt")
+def login_menu():
+    username = input("Enter user name")
+    password = input("Enter password name")
+    if login(username, password):
+        update_menu(username)
+    else:
+        print("Faild to log in")
 
-# A SelectionMenu constructs a menu from a list of strings
-selection_menu = SelectionMenu(["item1", "item2", "item3"])
 
-# A SubmenuItem lets you add a menu (the selection_menu above, for example)
-# as a submenu of another menu
-submenu_item = SubmenuItem("Submenu item", selection_menu, menu)
+def print_user_data(username):
+    print(get_user(username))
 
-# Once we're done creating them, we just add the items to the menu
-menu.append_item(menu_item)
-menu.append_item(function_item)
-menu.append_item(command_item)
-menu.append_item(submenu_item)
 
-# Finally, we call show to show the menu and allow the user to interact
+def add_playlist(username):
+    playlist_name = input("Enter playlist name")
+    create_playlist(username, playlist_name)
+
+
+def add_track(username):
+    playlist_name = input("Enter playlist name")
+    track_id = input("Enter track name")
+    add_track_to_playlist(username, playlist_name, track_id)
+
+
+def best_songs_for_artist(artist_id):
+    print(get_best_artist_songs(artist_id))
+
+
+def update_menu(username):
+    menu.remove_item(login_item)
+    menu.remove_item(signup_item)
+    playlists_item = FunctionItem("user data", print_user_data, [username])
+    add_playlist_item = FunctionItem("Create playlist", add_playlist, [username])
+    add_track_to_playlist_item = FunctionItem("Add track", add_track, [username])
+    search_all_singers_item = FunctionItem("Search best singers", best_songs_for_artist, ["4Uzm4t6wAufWqKP7ZgYLxF"])
+    menu.append_item(playlists_item)
+    menu.append_item(add_playlist_item)
+    menu.append_item(add_track_to_playlist_item)
+    menu.append_item(search_all_singers_item)
+
+
+menu = ConsoleMenu("Spotipy", "Welccome to ma29 spotipy")
+signup_item = FunctionItem("Sign up to spotipy", signup_menu)
+login_item = FunctionItem("Log in", login_menu)
+menu.append_item(login_item)
+menu.append_item(signup_item)
+
 menu.show()

@@ -1,6 +1,5 @@
 import os
-
-from config import PATHS, FREE, logging, MAX_PLAYLISTS_FOR_FREE_ACC
+from config import PATHS, logging
 from core.storage.readers import json_reader
 from core.storage.writers import json_writer
 
@@ -26,17 +25,7 @@ def add_songs_folder():
         logging.info("tracks uploaded")
 
 
-def signup(username: str, password: str, user_type=FREE):
-    write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
 
-
-def login(username: str, password: str):
-    users = read(PATHS['users'])
-    if users.get(username) and users.get(username)['password'] == password:
-        logging.info(f'{username} logged in successfully'.format(username=username))
-        return True
-    logging.info(f'{username} failed to log in'.format(username=username))
-    return False
 
 
 

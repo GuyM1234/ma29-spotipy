@@ -29,5 +29,3 @@ def get_album_songs(album_id: str):
     tracks = read(PATHS['tracks'])
     return {track['name'] for track in tracks.values() if track['album']['id'] == album_id}
 
-
-print(get_album_songs("1huMzmb62wgHCK3cqRy9L3"))

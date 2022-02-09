@@ -10,3 +10,72 @@ INFO:root:Added playlist successfully
 INFO:root:Added playlist successfully
 INFO:root:Added playlist successfully
 INFO:root:Added playlist successfully
+INFO:root:Enter an input failed to log in
+INFO:root:Enter an input failed to log in
+INFO:root:Enter an input logged in successfully
+INFO:root:Enter an input logged in successfully
+INFO:root:Enter an input logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy failed to log in
+INFO:root:1 failed to log in
+INFO:root:2 failed to log in
+INFO:root:2 failed to log in
+INFO:root:1 failed to log in
+INFO:root:2 failed to log in
+INFO:root:1 failed to log in
+INFO:root:1 failed to log in
+INFO:root:1 failed to log in
+INFO:root:2 failed to log in
+INFO:root:1 failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:ma failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:2 failed to log in
+INFO:root:2 failed to log in
+INFO:root:ma failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:2 failed to log in
+INFO:root:2 failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:ma failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:guy failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy failed to log in
+INFO:root:guy failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy failed to log in
+INFO:root:Guy logged in successfully
+INFO:root:Added playlist successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Added track successfully
+INFO:root:Guy logged in successfully
+INFO:root:Added track successfully
+INFO:root:Added playlist successfully
+INFO:root:Added playlist successfully
+INFO:root:Added playlist successfully
+INFO:root:Added playlist successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully
+INFO:root:Guy logged in successfully

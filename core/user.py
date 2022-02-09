@@ -13,9 +13,15 @@ def _get_user(func):
     return wrapper
 
 
+@_get_user
+def get_user(user: dict):
+    print(user)
+    return user
+
+
 def _create_playlist_wrapper(func):
     def wrapper(user: dict, playlist_name):
-        if user['type'] == FREE and len(user['playlists'][playlist_name]) == MAX_PLAYLISTS_FOR_FREE_ACC:
+        if user['type'] == FREE and len(user['playlists']) == MAX_PLAYLISTS_FOR_FREE_ACC:
             raise UserNotAllowedToAddMorePlaylists()
         else:
             func(user, playlist_name)
@@ -24,11 +30,11 @@ def _create_playlist_wrapper(func):
 
 
 def _add_track_wrapper(func):
-    def wrapper(user: dict, *args):
-        if user['type'] == FREE and len(user['playlists']) == MAX_PLAYLIST_TRACKS_FOR_FREE_ACC:
+    def wrapper(user: dict, playlist_name):
+        if user['type'] == FREE and len(user['playlists'][playlist_name]) == MAX_PLAYLIST_TRACKS_FOR_FREE_ACC:
             raise UserNotAllowedToAddMoreTracksToPlaylist()
         else:
-            func(user, *args)
+            func(user, playlist_name)
 
     return wrapper
 
@@ -47,7 +53,7 @@ def create_playlist(user: dict, playlist_name: str):
 
 @_get_user
 def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
-    if user['playlists'].get(playlist_name):
+    if user['playlists'].get(playlist_name) is not None:
         user['playlists'][playlist_name].append(track_id)
         update_user(user)
         logging.info('Added track successfully')
@@ -55,8 +61,18 @@ def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
         raise PlaylistDoesNotExists()
 
 
+def login(username: str, password: str):
+    users = read(PATHS['users'])
+    if users.get(username) and users.get(username)['password'] == password:
+        logging.info(f'{username} logged in successfully'.format(username=username))
+        return True
+    logging.info(f'{username} failed to log in'.format(username=username))
+    return False
+
+
+def signup(username: str, password: str, user_type=FREE):
+    write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
+
+
 def update_user(user: dict):
     write(PATHS['users'], user, 'username')
-
-
-create_playlist("asdbdsa", "13")
