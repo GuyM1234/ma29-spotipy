@@ -1,5 +1,4 @@
-from core.storage.readers import json_reader
-from core.storage.writers import json_writer
+
 from config import PATHS
 
 
