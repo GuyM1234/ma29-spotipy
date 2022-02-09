@@ -1,8 +1,8 @@
 from consolemenu import *
 from consolemenu.items import *
 
-from core.searching import get_best_artist_songs
-from core.user import signup, login, get_user, create_playlist, add_track_to_playlist
+from core.models.searching import get_best_artist_songs
+from core.models.user import signup, login, get_user, create_playlist, add_track_to_playlist
 
 
 def signup_menu():

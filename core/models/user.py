@@ -1,5 +1,5 @@
 from config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
-from core.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
+from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
     UserNotAllowedToAddMorePlaylists
 from core.models import write, read
 
@@ -74,5 +74,5 @@ def signup(username: str, password: str, user_type=FREE):
     write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
 
 
-def update_user(user: dict):
+def _update_user(user: dict):
     write(PATHS['users'], user, 'username')
