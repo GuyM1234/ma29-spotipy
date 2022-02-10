@@ -1,7 +1,6 @@
-from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
-from core.models.exceptions import PlaylistExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
-    UserNotAllowedToAddMorePlaylists, UserDoesNotExist
-from core.models.utils import write, read, get_track
+from core.config import PATHS, logging, FREE
+from core.models.exceptions import UserDoesNotExist
+from core.models.utils import write, read
 
 
 def get_user(username: str):
@@ -30,4 +29,5 @@ def signup(username: str, password: str, user_type=FREE):
     write(PATHS['users'], new_user, 'username')
 
 
-
+def get_user_tracks(user: dict):
+    return sum(user['playlists'].values(), [])

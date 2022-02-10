@@ -1,7 +1,7 @@
+from core.models.searching import get_album_songs
 from flask import Flask, request, jsonify
 
-from core.models.recomadations import get_recommended_songs
-from core.models.searching import *
+from core.models import get_recommended_songs, get_artists, get_artist_album, get_best_artist_songs
 
 app = Flask(__name__)
 
