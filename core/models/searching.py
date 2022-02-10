@@ -1,6 +1,7 @@
 from operator import itemgetter
 
 from core.config import PATHS, FREE
+from core.models.exceptions import MethodIsCorrupted
 from core.models.models import read
 from core.models.user import get_user
 
@@ -49,4 +50,7 @@ def get_album_songs(album_id: str):
 @authenticate
 def user_created_searching_method(func, *args):
     tracks = read(PATHS['tracks'])
-    return func(tracks, *args)
+    try:
+        return func(tracks, *args)
+    except Exception:
+        raise MethodIsCorrupted()

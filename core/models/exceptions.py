@@ -20,3 +20,7 @@ class UserNotAllowedToAddMoreTracksToPlaylist(Exception):
 
 class UsernameDoesNotExist(Exception):
     pass
+
+
+class MethodIsCorrupted(Exception):
+    pass
