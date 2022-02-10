@@ -62,8 +62,6 @@
 # menu.show()
 
 
-
-
 import requests
 
 x = requests.post("http://192.168.1.177:5000/recommended_songs", {"username": "g", "song_number": "5"})

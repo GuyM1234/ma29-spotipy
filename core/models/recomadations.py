@@ -29,3 +29,4 @@ def _calculate_audio_profile(user_tracks: list):
         if len(user_tracks) > 0 else DEFAULT_PREFERENCES
 
 
+print(get_recommended_songs("g", 5))
