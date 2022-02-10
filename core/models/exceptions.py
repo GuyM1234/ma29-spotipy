@@ -22,5 +22,9 @@ class UsernameDoesNotExist(Exception):
     pass
 
 
+class UserDoesNotExist(Exception):
+    pass
+
+
 class MethodIsCorrupted(Exception):
     pass

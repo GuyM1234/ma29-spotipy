@@ -27,6 +27,3 @@ def _calculate_audio_profile(user_tracks: list):
 
     return {audio_feature: value / len(user_tracks) for audio_feature, value in sum_audio_preferences.items()} \
         if len(user_tracks) > 0 else DEFAULT_PREFERENCES
-
-
-print(get_recommended_songs("g", 5))

@@ -1,6 +1,6 @@
 from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
 from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
-    UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist
+    UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist, UserDoesNotExist
 from core.models.utils import write, read, get_track
 
 
@@ -10,7 +10,7 @@ def _get_user(func):
             user = read(PATHS['users']).get(username)
             user['username'] = username
             return func(user, *args)
-        raise UsernameDoesNotExist()
+        raise UserDoesNotExist()
 
     return wrapper
 
@@ -67,9 +67,8 @@ def login(username: str, password: str):
     users = read(PATHS['users'])
     if users.get(username) and users.get(username)['password'] == password:
         logging.info(f'{username} logged in successfully'.format(username=username))
-        return True
     logging.info(f'{username} failed to log in'.format(username=username))
-    return False
+    raise UserDoesNotExist()
 
 
 def signup(username: str, password: str, user_type=FREE):
