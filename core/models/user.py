@@ -79,3 +79,4 @@ def signup(username: str, password: str, user_type=FREE):
 def _update_user(user: dict):
     write(PATHS['users'], user, 'username')
 
+

@@ -15,7 +15,14 @@
       }
     ],
     "name": "\u05ea\u05dc \u05d0\u05d1\u05d9\u05d1 \u05d6\u05d4 \u05d0\u05e0\u05d9 \u05d5\u05d0\u05ea",
-    "popularity": 53
+    "popularity": 53,
+    "audio_profile": {
+      "danceability": 0.847,
+      "energy": 0.608,
+      "acousticness": 0.511,
+      "instrumentalness": 0,
+      "valence": 0.707
+    }
   },
   "03DcpryHcONqKi2uKXK5Ow": {
     "album": {
@@ -29,7 +36,14 @@
       }
     ],
     "name": "\u05d0\u05d6 \u05de\u05d4",
-    "popularity": 34
+    "popularity": 34,
+    "audio_profile": {
+      "danceability": 0.705,
+      "energy": 0.867,
+      "acousticness": 0.0711,
+      "instrumentalness": 0,
+      "valence": 0.965
+    }
   },
   "086myS9r57YsLbJpU0TgK9": {
     "album": {
@@ -43,7 +57,14 @@
       }
     ],
     "name": "Why'd You Only Call Me When You're High?",
-    "popularity": 87
+    "popularity": 87,
+    "audio_profile": {
+      "danceability": 0.691,
+      "energy": 0.631,
+      "acousticness": 0.0483,
+      "instrumentalness": 1.13e-05,
+      "valence": 0.8
+    }
   },
   "09PZuKctf7D3RAdaegN7zu": {
     "album": {
@@ -57,7 +78,14 @@
       }
     ],
     "name": "\u05e4\u05e8\u05e6\u05d5\u05e4\u05d9\u05dd",
-    "popularity": 54
+    "popularity": 54,
+    "audio_profile": {
+      "danceability": 0.668,
+      "energy": 0.48,
+      "acousticness": 0.165,
+      "instrumentalness": 0.0139,
+      "valence": 0.4
+    }
   },
   "0C9jZPUv4SuaXkuEQw6L40": {
     "album": {
@@ -71,7 +99,14 @@
       }
     ],
     "name": "I'm A Believer",
-    "popularity": 69
+    "popularity": 69,
+    "audio_profile": {
+      "danceability": 0.549,
+      "energy": 0.981,
+      "acousticness": 0.0178,
+      "instrumentalness": 1.8e-06,
+      "valence": 0.873
+    }
   },
   "0faXHILILebCGnJBPU6KJJ": {
     "album": {
@@ -85,7 +120,14 @@
       }
     ],
     "name": "The Diary of Jane - Single Version",
-    "popularity": 76
+    "popularity": 76,
+    "audio_profile": {
+      "danceability": 0.392,
+      "energy": 0.964,
+      "acousticness": 7.13e-05,
+      "instrumentalness": 0.0387,
+      "valence": 0.269
+    }
   },
   "0oHTvb0EVeYTUc0zscZphb": {
     "album": {
@@ -99,7 +141,14 @@
       }
     ],
     "name": "\u05e0\u05d5\u05e8\u05d9\u05d3 \u05ea'\u05d7\u05d5\u05dc\u05e6\u05d4",
-    "popularity": 46
+    "popularity": 46,
+    "audio_profile": {
+      "danceability": 0.527,
+      "energy": 0.653,
+      "acousticness": 0.00201,
+      "instrumentalness": 1.41e-05,
+      "valence": 0.608
+    }
   },
   "0rKtyWc8bvkriBthvHKY8d": {
     "album": {
@@ -113,7 +162,14 @@
       }
     ],
     "name": "SLOW DANCING IN THE DARK",
-    "popularity": 86
+    "popularity": 86,
+    "audio_profile": {
+      "danceability": 0.515,
+      "energy": 0.479,
+      "acousticness": 0.544,
+      "instrumentalness": 0.00598,
+      "valence": 0.284
+    }
   },
   "0xu3PasKYiRNedJOnRBkJA": {
     "album": {
@@ -127,7 +183,14 @@
       }
     ],
     "name": "\u05de\u05d9\u05e9\u05d4\u05d5 \u05e9\u05d5\u05de\u05e2",
-    "popularity": 34
+    "popularity": 34,
+    "audio_profile": {
+      "danceability": 0.599,
+      "energy": 0.553,
+      "acousticness": 0.488,
+      "instrumentalness": 0,
+      "valence": 0.572
+    }
   },
   "1bFSitBqVkOrZ5geYAHEKX": {
     "album": {
@@ -149,7 +212,14 @@
       }
     ],
     "name": "\u05e4\u05e8\u05e4\u05e8",
-    "popularity": 47
+    "popularity": 47,
+    "audio_profile": {
+      "danceability": 0.625,
+      "energy": 0.732,
+      "acousticness": 0.0126,
+      "instrumentalness": 0,
+      "valence": 0.198
+    }
   },
   "1K0Mvug9bSd7KqjAPK5CnG": {
     "album": {
@@ -163,7 +233,14 @@
       }
     ],
     "name": "\u05ea\u05d2\u05d9\u05d3\u05d5 \u05dc\u05d9 \u05d0\u05d7\u05e8\u05ea",
-    "popularity": 18
+    "popularity": 18,
+    "audio_profile": {
+      "danceability": 0.517,
+      "energy": 0.883,
+      "acousticness": 7.57e-05,
+      "instrumentalness": 0,
+      "valence": 0.585
+    }
   },
   "1NcXVKZFIQd9J8Y74ls6Xp": {
     "album": {
@@ -177,7 +254,14 @@
       }
     ],
     "name": "\u05d0\u05d9\u05df \u05e7\u05e5 \u05dc\u05d9\u05dc\u05d3\u05d5\u05ea - Live",
-    "popularity": 12
+    "popularity": 12,
+    "audio_profile": {
+      "danceability": 0.344,
+      "energy": 0.741,
+      "acousticness": 0.714,
+      "instrumentalness": 0.0185,
+      "valence": 0.459
+    }
   },
   "1QxjdVgVrqRRuPM4T0dgWx": {
     "album": {
@@ -191,7 +275,14 @@
       }
     ],
     "name": "\u05d2\u05d2",
-    "popularity": 43
+    "popularity": 43,
+    "audio_profile": {
+      "danceability": 0.527,
+      "energy": 0.529,
+      "acousticness": 0.255,
+      "instrumentalness": 0.00324,
+      "valence": 0.547
+    }
   },
   "1VGzxJnVQND7Cg5H5wGj14": {
     "album": {
@@ -205,7 +296,14 @@
       }
     ],
     "name": "YEAH RIGHT",
-    "popularity": 81
+    "popularity": 81,
+    "audio_profile": {
+      "danceability": 0.672,
+      "energy": 0.588,
+      "acousticness": 0.619,
+      "instrumentalness": 0.241,
+      "valence": 0.204
+    }
   },
   "1yjY7rpaAQvKwpdUliHx0d": {
     "album": {
@@ -219,7 +317,14 @@
       }
     ],
     "name": "Still into You",
-    "popularity": 83
+    "popularity": 83,
+    "audio_profile": {
+      "danceability": 0.602,
+      "energy": 0.923,
+      "acousticness": 0.0098,
+      "instrumentalness": 0,
+      "valence": 0.765
+    }
   },
   "20rg6HNd837eX34TA5tEVf": {
     "album": {
@@ -233,7 +338,14 @@
       }
     ],
     "name": "\u05d9\u05d4\u05dc\u05d5\u05dd - Prod. By Triangle",
-    "popularity": 52
+    "popularity": 52,
+    "audio_profile": {
+      "danceability": 0.772,
+      "energy": 0.616,
+      "acousticness": 0.0494,
+      "instrumentalness": 0,
+      "valence": 0.562
+    }
   },
   "2374M0fQpWi3dLnB54qaLX": {
     "album": {
@@ -247,7 +359,14 @@
       }
     ],
     "name": "Africa",
-    "popularity": 84
+    "popularity": 84,
+    "audio_profile": {
+      "danceability": 0.671,
+      "energy": 0.373,
+      "acousticness": 0.257,
+      "instrumentalness": 8.01e-05,
+      "valence": 0.732
+    }
   },
   "2cY3YDf9AQl2DuocD0JYf0": {
     "album": {
@@ -265,7 +384,14 @@
       }
     ],
     "name": "Tubthumping - I get knocked Down",
-    "popularity": 36
+    "popularity": 36,
+    "audio_profile": {
+      "danceability": 0.63,
+      "energy": 0.901,
+      "acousticness": 0.152,
+      "instrumentalness": 0,
+      "valence": 0.838
+    }
   },
   "2fuCquhmrzHpu5xcA1ci9x": {
     "album": {
@@ -283,7 +409,14 @@
       }
     ],
     "name": "Under Pressure - Remastered 2011",
-    "popularity": 81
+    "popularity": 81,
+    "audio_profile": {
+      "danceability": 0.671,
+      "energy": 0.712,
+      "acousticness": 0.429,
+      "instrumentalness": 0,
+      "valence": 0.462
+    }
   },
   "2GCR5b8UkMN2QtBMtfMvZQ": {
     "album": {
@@ -297,7 +430,14 @@
       }
     ],
     "name": "\u05de\u05e6\u05d9\u05dc\u05d4 \u05d0\u05d5\u05ea\u05d9",
-    "popularity": 44
+    "popularity": 44,
+    "audio_profile": {
+      "danceability": 0.71,
+      "energy": 0.872,
+      "acousticness": 0.0368,
+      "instrumentalness": 0.00485,
+      "valence": 0.741
+    }
   },
   "2M9ro2krNb7nr7HSprkEgo": {
     "album": {
@@ -311,7 +451,14 @@
       }
     ],
     "name": "Fast Car",
-    "popularity": 79
+    "popularity": 79,
+    "audio_profile": {
+      "danceability": 0.711,
+      "energy": 0.292,
+      "acousticness": 0.313,
+      "instrumentalness": 0,
+      "valence": 0.194
+    }
   },
   "2MbgQKWhoii8bqsMBWWWgA": {
     "album": {
@@ -325,7 +472,14 @@
       }
     ],
     "name": "Courage to Change",
-    "popularity": 67
+    "popularity": 67,
+    "audio_profile": {
+      "danceability": 0.307,
+      "energy": 0.606,
+      "acousticness": 0.0927,
+      "instrumentalness": 0,
+      "valence": 0.11
+    }
   },
   "2OvYRK5xu5APpAbLaB3l7b": {
     "album": {
@@ -339,7 +493,14 @@
       }
     ],
     "name": "Thank God I'm Not You",
-    "popularity": 58
+    "popularity": 58,
+    "audio_profile": {
+      "danceability": 0.542,
+      "energy": 0.828,
+      "acousticness": 0.00175,
+      "instrumentalness": 0.0133,
+      "valence": 0.769
+    }
   },
   "2pMVkGu7SomhwZwufGOPda": {
     "album": {
@@ -357,7 +518,14 @@
       }
     ],
     "name": "\u05d0\u05e8\u05e5 \u05e0\u05d4\u05d3\u05e8\u05ea | \u05de\u05ea\u05d5\u05e7\u05d4 \u05de\u05d4\u05d7\u05d9\u05d9\u05dd",
-    "popularity": 32
+    "popularity": 32,
+    "audio_profile": {
+      "danceability": 0.71,
+      "energy": 0.712,
+      "acousticness": 0.541,
+      "instrumentalness": 0,
+      "valence": 0.739
+    }
   },
   "2rUXZPyYkMvncJ7jkbOmd2": {
     "album": {
@@ -371,7 +539,14 @@
       }
     ],
     "name": "\u05dc\u05d9\u05dc\u05d4 \u05d1\u05dc\u05d9 \u05db\u05d5\u05db\u05d1",
-    "popularity": 29
+    "popularity": 29,
+    "audio_profile": {
+      "danceability": 0.54,
+      "energy": 0.417,
+      "acousticness": 0.665,
+      "instrumentalness": 0,
+      "valence": 0.543
+    }
   },
   "348rUXIKEw4DYw7R0oIYNu": {
     "album": {
@@ -385,7 +560,14 @@
       }
     ],
     "name": "\u05db\u05dc \u05d4\u05e9\u05d1\u05d5\u05e2 \u05de\u05e8\u05d2\u05d9\u05e9 \u05db\u05de\u05d5 \u05e9\u05d1\u05ea",
-    "popularity": 41
+    "popularity": 41,
+    "audio_profile": {
+      "danceability": 0.543,
+      "energy": 0.842,
+      "acousticness": 0.0986,
+      "instrumentalness": 0,
+      "valence": 0.3
+    }
   },
   "3DQVgcqaP3iSMbaKsd57l5": {
     "album": {
@@ -399,7 +581,14 @@
       }
     ],
     "name": "I Bet You Look Good On The Dancefloor",
-    "popularity": 75
+    "popularity": 75,
+    "audio_profile": {
+      "danceability": 0.535,
+      "energy": 0.948,
+      "acousticness": 0.00225,
+      "instrumentalness": 0,
+      "valence": 0.778
+    }
   },
   "3HWzoMvoF3TQfYg4UPszDq": {
     "album": {
@@ -413,7 +602,14 @@
       }
     ],
     "name": "Truth Hurts",
-    "popularity": 78
+    "popularity": 78,
+    "audio_profile": {
+      "danceability": 0.715,
+      "energy": 0.624,
+      "acousticness": 0.11,
+      "instrumentalness": 0,
+      "valence": 0.412
+    }
   },
   "3MjrueDQKVr6xDDseZwhEd": {
     "album": {
@@ -427,7 +623,14 @@
       }
     ],
     "name": "Figure It Out",
-    "popularity": 69
+    "popularity": 69,
+    "audio_profile": {
+      "danceability": 0.658,
+      "energy": 0.814,
+      "acousticness": 0.229,
+      "instrumentalness": 0.00676,
+      "valence": 0.69
+    }
   },
   "3mvVb3dFiHyXG86N3gVYja": {
     "album": {
@@ -441,7 +644,14 @@
       }
     ],
     "name": "\u05db\u05de\u05d5 \u05e1\u05d9\u05e0\u05d3\u05e8\u05dc\u05d4",
-    "popularity": 33
+    "popularity": 33,
+    "audio_profile": {
+      "danceability": 0.746,
+      "energy": 0.89,
+      "acousticness": 0.225,
+      "instrumentalness": 0,
+      "valence": 0.961
+    }
   },
   "3o863oLzV4qj53EBCtEAqz": {
     "album": {
@@ -455,7 +665,14 @@
       }
     ],
     "name": "\u05e0\u05e2\u05e8\u05d9 \u05e9\u05d5\u05d1\u05d4 \u05d0\u05dc\u05d9",
-    "popularity": 39
+    "popularity": 39,
+    "audio_profile": {
+      "danceability": 0.819,
+      "energy": 0.705,
+      "acousticness": 0.138,
+      "instrumentalness": 0,
+      "valence": 0.979
+    }
   },
   "3RkQ3UwOyPqpIiIvGVewuU": {
     "album": {
@@ -469,7 +686,14 @@
       }
     ],
     "name": "Mr. Tambourine Man",
-    "popularity": 66
+    "popularity": 66,
+    "audio_profile": {
+      "danceability": 0.39,
+      "energy": 0.31,
+      "acousticness": 0.794,
+      "instrumentalness": 0,
+      "valence": 0.584
+    }
   },
   "3Sa4wFRcNP1uNzwQA6cVgS": {
     "album": {
@@ -483,7 +707,14 @@
       }
     ],
     "name": "\u05d6\u05de\u05e0\u05d9\u05dd \u05e7\u05d8\u05e0\u05d9\u05dd",
-    "popularity": 24
+    "popularity": 24,
+    "audio_profile": {
+      "danceability": 0.813,
+      "energy": 0.643,
+      "acousticness": 0.201,
+      "instrumentalness": 4.13e-06,
+      "valence": 0.89
+    }
   },
   "3yWWNB1ESnafJRbTXOJ3sI": {
     "album": {
@@ -497,7 +728,14 @@
       }
     ],
     "name": "\u05e7\u05d7 \u05d0\u05d5\u05ea\u05d9",
-    "popularity": 41
+    "popularity": 41,
+    "audio_profile": {
+      "danceability": 0.463,
+      "energy": 0.482,
+      "acousticness": 0.295,
+      "instrumentalness": 0,
+      "valence": 0.131
+    }
   },
   "40zK7MICeyHNNWyOrUU0sC": {
     "album": {
@@ -511,7 +749,14 @@
       }
     ],
     "name": "\u05e9\u05d9\u05e8 \u05d4\u05e4\u05e8\u05d9\u05d7\u05d4",
-    "popularity": 26
+    "popularity": 26,
+    "audio_profile": {
+      "danceability": 0.661,
+      "energy": 0.833,
+      "acousticness": 0.439,
+      "instrumentalness": 0,
+      "valence": 0.566
+    }
   },
   "463CkQjx2Zk1yXoBuierM9": {
     "album": {
@@ -529,7 +774,14 @@
       }
     ],
     "name": "Levitating (feat. DaBaby)",
-    "popularity": 84
+    "popularity": 84,
+    "audio_profile": {
+      "danceability": 0.702,
+      "energy": 0.825,
+      "acousticness": 0.00883,
+      "instrumentalness": 0,
+      "valence": 0.915
+    }
   },
   "4bHsxqR3GMrXTxEPLuK5ue": {
     "album": {
@@ -543,7 +795,14 @@
       }
     ],
     "name": "Don't Stop Believin'",
-    "popularity": 83
+    "popularity": 83,
+    "audio_profile": {
+      "danceability": 0.5,
+      "energy": 0.748,
+      "acousticness": 0.127,
+      "instrumentalness": 0,
+      "valence": 0.514
+    }
   },
   "4iTXVDvJIcFtSqvshO4JPA": {
     "album": {
@@ -557,7 +816,14 @@
       }
     ],
     "name": "\u05d1.\u05de.\u05d5\u05d5. \u05e9\u05d7\u05d5\u05e8\u05d4",
-    "popularity": 36
+    "popularity": 36,
+    "audio_profile": {
+      "danceability": 0.712,
+      "energy": 0.878,
+      "acousticness": 0.0849,
+      "instrumentalness": 4.5e-05,
+      "valence": 0.976
+    }
   },
   "54PKGOlUPA4NXGQYnWxz9K": {
     "album": {
@@ -575,7 +841,14 @@
       }
     ],
     "name": "\u05d6\u05d4 \u05d1\u05d3\u05dd \u05e9\u05dc\u05d9",
-    "popularity": 38
+    "popularity": 38,
+    "audio_profile": {
+      "danceability": 0.601,
+      "energy": 0.773,
+      "acousticness": 0.122,
+      "instrumentalness": 0.00245,
+      "valence": 0.675
+    }
   },
   "5bSY17Hl7P9ztiKCTyLz4a": {
     "album": {
@@ -593,7 +866,14 @@
       }
     ],
     "name": "\u05d9\u05e9 \u05dc\u05d9 \u05d7\u05d5\u05e8 \u05d1\u05dc\u05d1 \u05d1\u05e6\u05d5\u05e8\u05d4 \u05e9\u05dc\u05da",
-    "popularity": 52
+    "popularity": 52,
+    "audio_profile": {
+      "danceability": 0.641,
+      "energy": 0.617,
+      "acousticness": 0.0156,
+      "instrumentalness": 6.72e-06,
+      "valence": 0.823
+    }
   },
   "5DWZX4piXraq1IOr2a4sBL": {
     "album": {
@@ -611,7 +891,14 @@
       }
     ],
     "name": "Oblivion (feat. Labrinth)",
-    "popularity": 44
+    "popularity": 44,
+    "audio_profile": {
+      "danceability": 0.57,
+      "energy": 0.482,
+      "acousticness": 0.337,
+      "instrumentalness": 0,
+      "valence": 0.334
+    }
   },
   "5eFxwmqKrHpSQDOEIFYlgY": {
     "album": {
@@ -625,7 +912,14 @@
       }
     ],
     "name": "Animal I Have Become",
-    "popularity": 68
+    "popularity": 68,
+    "audio_profile": {
+      "danceability": 0.553,
+      "energy": 0.853,
+      "acousticness": 0.000684,
+      "instrumentalness": 0,
+      "valence": 0.506
+    }
   },
   "5F1ZmucV0uJY14y2dYKePa": {
     "album": {
@@ -639,7 +933,14 @@
       }
     ],
     "name": "Sanctuary",
-    "popularity": 72
+    "popularity": 72,
+    "audio_profile": {
+      "danceability": 0.552,
+      "energy": 0.638,
+      "acousticness": 0.387,
+      "instrumentalness": 0.00014,
+      "valence": 0.332
+    }
   },
   "5kKme9GCKnjKWC16Lb8cER": {
     "album": {
@@ -653,7 +954,14 @@
       }
     ],
     "name": "\u05e2\u05d5\u05d3 \u05e1\u05d9\u05e4\u05d5\u05e8 \u05d0\u05d7\u05d3 \u05e9\u05dc \u05d0\u05d4\u05d1\u05d4",
-    "popularity": 35
+    "popularity": 35,
+    "audio_profile": {
+      "danceability": 0.477,
+      "energy": 0.342,
+      "acousticness": 0.304,
+      "instrumentalness": 0,
+      "valence": 0.346
+    }
   },
   "5RnhWaP5VD3eJN3J0chPmh": {
     "album": {
@@ -671,7 +979,14 @@
       }
     ],
     "name": "\u05d1\u05e1\u05d9\u05d1\u05d5\u05d1",
-    "popularity": 51
+    "popularity": 51,
+    "audio_profile": {
+      "danceability": 0.633,
+      "energy": 0.81,
+      "acousticness": 0.0997,
+      "instrumentalness": 1.91e-06,
+      "valence": 0.665
+    }
   },
   "5rX6C5QVvvZB7XckETNych": {
     "album": {
@@ -685,7 +1000,14 @@
       }
     ],
     "name": "All Summer Long",
-    "popularity": 75
+    "popularity": 75,
+    "audio_profile": {
+      "danceability": 0.7,
+      "energy": 0.864,
+      "acousticness": 0.0212,
+      "instrumentalness": 0,
+      "valence": 0.887
+    }
   },
   "5W9Qlj971vEzgfVHxiUCkT": {
     "album": {
@@ -699,7 +1021,14 @@
       }
     ],
     "name": "Anxious",
-    "popularity": 49
+    "popularity": 49,
+    "audio_profile": {
+      "danceability": 0.66,
+      "energy": 0.722,
+      "acousticness": 0.0474,
+      "instrumentalness": 4.67e-06,
+      "valence": 0.465
+    }
   },
   "5X0UESDGqxNkFIbgtZU0sc": {
     "album": {
@@ -713,7 +1042,14 @@
       }
     ],
     "name": "\u05de\u05db\u05d9\u05e8 \u05d0\u05d5\u05ea\u05d5",
-    "popularity": 38
+    "popularity": 38,
+    "audio_profile": {
+      "danceability": 0.549,
+      "energy": 0.636,
+      "acousticness": 0.0858,
+      "instrumentalness": 0,
+      "valence": 0.364
+    }
   },
   "5xetBdYzklZ71hbHjXb4Zf": {
     "album": {
@@ -727,7 +1063,14 @@
       }
     ],
     "name": "Beyond The Stars",
-    "popularity": 50
+    "popularity": 50,
+    "audio_profile": {
+      "danceability": 0.406,
+      "energy": 0.952,
+      "acousticness": 6.72e-06,
+      "instrumentalness": 0.0252,
+      "valence": 0.534
+    }
   },
   "5yvN1r8skR9fE5jqNgsCox": {
     "album": {
@@ -741,7 +1084,14 @@
       }
     ],
     "name": "\u05d4\u05e7\u05e0\u05d0\u05d4",
-    "popularity": 46
+    "popularity": 46,
+    "audio_profile": {
+      "danceability": 0.546,
+      "energy": 0.681,
+      "acousticness": 0.0726,
+      "instrumentalness": 0,
+      "valence": 0.501
+    }
   },
   "6corIIuvWjaVslSyYoXGuR": {
     "album": {
@@ -755,7 +1105,14 @@
       }
     ],
     "name": "\u05dc\u05d1\u05d3\u05d5\u05e7 \u05dc\u05da \u05ea'\u05de\u05e0\u05d5\u05e2",
-    "popularity": 34
+    "popularity": 34,
+    "audio_profile": {
+      "danceability": 0.698,
+      "energy": 0.858,
+      "acousticness": 0.0944,
+      "instrumentalness": 0.000282,
+      "valence": 0.856
+    }
   },
   "6hWXe5KsRygkMO5MOvk7W4": {
     "album": {
@@ -769,7 +1126,14 @@
       }
     ],
     "name": "\u05d1\u05d7\u05d5\u05dd \u05e9\u05dc \u05ea\u05dc \u05d0\u05d1\u05d9\u05d1",
-    "popularity": 39
+    "popularity": 39,
+    "audio_profile": {
+      "danceability": 0.398,
+      "energy": 0.826,
+      "acousticness": 0.587,
+      "instrumentalness": 0,
+      "valence": 0.388
+    }
   },
   "6J2R4mMoDfb5NQMDuV0nWq": {
     "album": {
@@ -783,7 +1147,14 @@
       }
     ],
     "name": "\u05e2\u05e9\u05e8 \u05d0\u05e4\u05e1 \u05dc\u05da",
-    "popularity": 51
+    "popularity": 51,
+    "audio_profile": {
+      "danceability": 0.625,
+      "energy": 0.498,
+      "acousticness": 0.752,
+      "instrumentalness": 0,
+      "valence": 0.546
+    }
   },
   "6Ks2OC8Hydb60EiBqJdoiW": {
     "album": {
@@ -797,7 +1168,14 @@
       }
     ],
     "name": "Bruises",
-    "popularity": 23
+    "popularity": 23,
+    "audio_profile": {
+      "danceability": 0.526,
+      "energy": 0.545,
+      "acousticness": 0.0118,
+      "instrumentalness": 8.93e-06,
+      "valence": 0.676
+    }
   },
   "6L89mwZXSOwYl76YXfX13s": {
     "album": {
@@ -811,7 +1189,14 @@
       }
     ],
     "name": "Basket Case",
-    "popularity": 82
+    "popularity": 82,
+    "audio_profile": {
+      "danceability": 0.442,
+      "energy": 0.943,
+      "acousticness": 0.00293,
+      "instrumentalness": 8.71e-06,
+      "valence": 0.781
+    }
   },
   "6p8eEdiZLKJH8tcjGZuNTK": {
     "album": {
@@ -825,7 +1210,14 @@
       }
     ],
     "name": "Run",
-    "popularity": 66
+    "popularity": 66,
+    "audio_profile": {
+      "danceability": 0.447,
+      "energy": 0.72,
+      "acousticness": 0.0416,
+      "instrumentalness": 0.000297,
+      "valence": 0.362
+    }
   },
   "75r8RynXHLGJPLw8CY87zh": {
     "album": {
@@ -839,7 +1231,14 @@
       }
     ],
     "name": "\u05dc\u05d0 \u05d7\u05e1\u05e8 \u05dc\u05d9 \u05db\u05dc\u05d5\u05dd",
-    "popularity": 32
+    "popularity": 32,
+    "audio_profile": {
+      "danceability": 0.76,
+      "energy": 0.942,
+      "acousticness": 0.114,
+      "instrumentalness": 1.56e-05,
+      "valence": 0.894
+    }
   },
   "7aewPE2qqi9OlnG4HSDZnO": {
     "album": {
@@ -853,7 +1252,14 @@
       }
     ],
     "name": "Darkness",
-    "popularity": 49
+    "popularity": 49,
+    "audio_profile": {
+      "danceability": 0.434,
+      "energy": 0.844,
+      "acousticness": 0.0318,
+      "instrumentalness": 3.31e-06,
+      "valence": 0.432
+    }
   },
   "7f6Bkdh4flhzfeUcMeuBjY": {
     "album": {
@@ -867,7 +1273,14 @@
       }
     ],
     "name": "\u05d4\u05d2\u05e9\u05de\u05d4 \u05e2\u05e6\u05de\u05d9\u05ea",
-    "popularity": 42
+    "popularity": 42,
+    "audio_profile": {
+      "danceability": 0.593,
+      "energy": 0.692,
+      "acousticness": 0.218,
+      "instrumentalness": 3.74e-06,
+      "valence": 0.621
+    }
   },
   "7jbmHNja5Ifm14GCKa3CFO": {
     "album": {
@@ -881,6 +1294,13 @@
       }
     ],
     "name": "\u05d9\u05d0\u05dc\u05dc\u05d4 \u05dc\u05da \u05d4\u05d1\u05d9\u05ea\u05d4 \u05de\u05d5\u05d8\u05d9",
-    "popularity": 30
+    "popularity": 30,
+    "audio_profile": {
+      "danceability": 0.721,
+      "energy": 0.896,
+      "acousticness": 0.144,
+      "instrumentalness": 3.49e-06,
+      "valence": 0.929
+    }
   }
 }
