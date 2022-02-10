@@ -12,3 +12,4 @@ PREMIUM = "premium"
 logging.basicConfig(filename=PATHS['log_file'], encoding='utf-8', level=logging.DEBUG)
 MAX_PLAYLISTS_FOR_FREE_ACC = 5
 MAX_PLAYLIST_TRACKS_FOR_FREE_ACC = 20
+AUDIO_FEATURES = {"danceability", "energy", "acousticness", "instrumentalness", "valence"}

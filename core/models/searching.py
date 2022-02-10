@@ -1,6 +1,6 @@
 from operator import itemgetter
 
-from core.config import PATHS, FREE
+from core.config import PATHS, FREE, AUDIO_FEATURES
 from core.models.exceptions import MethodIsCorrupted
 from core.models.models import read
 from core.models.user import get_user
@@ -54,3 +54,17 @@ def user_created_searching_method(func, *args):
         return func(tracks, *args)
     except Exception:
         raise MethodIsCorrupted()
+
+
+# @authenticate
+def recommended_songs(user_audio_profile: dict):
+    tracks = read(PATHS['tracks'])
+    songs = [(track['name'], track['popularity'], get_recommended_value(track, user_audio_profile)) for track in tracks.values()]
+    return sorted(songs, key=itemgetter(2))
+
+
+def get_recommended_value(track, user_audio_profile):
+    return sum([abs(track['audio_profile'][audio_feature] - user_audio_profile[audio_feature]) for audio_feature in AUDIO_FEATURES])
+
+
+print(recommended_songs(r))
