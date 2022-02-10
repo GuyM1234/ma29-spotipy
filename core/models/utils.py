@@ -41,7 +41,3 @@ def get_track(track_id):
     if tracks.get(track_id):
         return tracks[track_id]
     raise TrackDoesNotExist
-
-
-def get_user_tracks(user: dict):
-    return sum(user['playlists'].values(), [])

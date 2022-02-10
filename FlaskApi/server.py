@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-from core.models.recomadations import get_recommended_songs
+from core.models.user.recomadations import get_recommended_songs
 from core.models.searching import *
 
 app = Flask(__name__)
