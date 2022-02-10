@@ -55,7 +55,7 @@ def create_playlist(user: dict, playlist_name: str):
 @_get_user
 def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
     if user['playlists'].get(playlist_name) is not None:
-        get_track()  # raises error if track does not exist
+        get_track(track_id)  # raises error if track does not exist
         user['playlists'][playlist_name].append(track_id)
         _update_user(user)
         logging.info('Added track successfully')

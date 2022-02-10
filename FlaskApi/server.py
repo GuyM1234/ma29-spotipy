@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+
+from core.models.recomadations import get_recommended_songs
 from core.models.searching import *
 
 app = Flask(__name__)
@@ -22,6 +24,11 @@ def best_artist_songs():
 @app.route('/album_songs', methods=["POST"])
 def album_songs():
     return jsonify(get_album_songs(request.form.to_dict()['username'], request.form.to_dict()['id']))
+
+
+@app.route('/recommended_songs', methods=["POST"])
+def recommended_songs():
+    return jsonify(get_recommended_songs(request.form.to_dict()['username'], int(request.form.to_dict()['song_number'])))
 
 
 if __name__ == '__main__':
