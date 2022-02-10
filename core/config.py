@@ -13,4 +13,4 @@ logging.basicConfig(filename=PATHS['log_file'], encoding='utf-8', level=logging.
 MAX_PLAYLISTS_FOR_FREE_ACC = 5
 MAX_PLAYLIST_TRACKS_FOR_FREE_ACC = 20
 AUDIO_FEATURES = {"danceability", "energy", "acousticness", "instrumentalness", "valence"}
-STARTING_PREFERENCE = 0.5
+DEFAULT_PREFERENCES = {audio_feature: 0.5 for audio_feature in AUDIO_FEATURES}

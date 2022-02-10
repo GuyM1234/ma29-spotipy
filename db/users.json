@@ -1,1 +1,7 @@
-{"g": {"password": "1", "type": "free", "playlists": {}, "audio_profile": {"energy": 0.5, "danceability": 0.5, "instrumentalness": 0.5, "acousticness": 0.5, "valence": 0.5}}}
+{
+  "g": {
+    "password": "1",
+    "type": "free",
+    "playlists": {}
+  }
+}

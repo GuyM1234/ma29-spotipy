@@ -1,5 +1,4 @@
-from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC, \
-    STARTING_PREFERENCE, AUDIO_FEATURES
+from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
 from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
     UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist
 from core.models.utils import write, read, get_track
@@ -10,9 +9,8 @@ def _get_user(func):
         if read(PATHS['users']).get(username) is not None:
             user = read(PATHS['users']).get(username)
             user['username'] = username
-        else:
-            raise UsernameDoesNotExist()
-        return func(user, *args)
+            return func(user, *args)
+        raise UsernameDoesNotExist()
 
     return wrapper
 
@@ -75,29 +73,9 @@ def login(username: str, password: str):
 
 
 def signup(username: str, password: str, user_type=FREE):
-    new_user = {'username': username, 'password': password, 'type': user_type, 'playlists': {},
-                'audio_profile': _create_audio_profile()}
+    new_user = {'username': username, 'password': password, 'type': user_type, 'playlists': {}}
     write(PATHS['users'], new_user, 'username')
-
-
-@_get_user
-def calculate_audio_profile(user: dict):
-    sum_audio_preferences = {audio_feature: 0 for audio_feature in AUDIO_FEATURES}
-    songs_number = 0
-    for playlist in user['playlists']:
-        songs_number += len(playlist)
-        for track_id in playlist:
-            for audio_feature, value in get_track(track_id)['audio_profile'].items():
-                sum_audio_preferences[audio_feature] += value
-    return {{audio_feature: value / songs_number} for audio_feature, value in sum_audio_preferences.items()}
-
-
-def _create_audio_profile():
-    return {audio_feature: STARTING_PREFERENCE for audio_feature in AUDIO_FEATURES}
 
 
 def _update_user(user: dict):
     write(PATHS['users'], user, 'username')
-
-
-print(calculate_audio_profile("g"))
