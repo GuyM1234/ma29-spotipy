@@ -16,7 +16,7 @@ def get_recommended_songs(username: str, number_of_songs: int, recommendation_fu
     user_audio_profile = _calculate_audio_profile(user_tracks)
     songs = [(track['name'], recommendation_func(track, user_audio_profile)) for track_id, track in
              tracks.items() if track_id not in user_tracks]
-    return sorted(songs, key=itemgetter(1))[0:number_of_songs]
+    return sorted(songs, key=itemgetter(1))[0:int(number_of_songs)]
 
 
 def _calculate_audio_profile(user_tracks: list):
