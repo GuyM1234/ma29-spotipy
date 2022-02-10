@@ -1,11 +1,27 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from core.models.searching import *
+
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST'])
-def hello_world():
-    return 'Hello World'
+@app.route('/all_artists', methods=["POST"])
+def all_artists():
+    return jsonify(get_artists(request.form.to_dict()['username']))
+
+
+@app.route('/artist_albums', methods=["POST"])
+def artist_albums():
+    return jsonify(get_artist_album(request.form.to_dict()['username'], request.form.to_dict()['id']))
+
+
+@app.route('/best_artist_songs', methods=["POST"])
+def best_artist_songs():
+    return jsonify(get_best_artist_songs(request.form.to_dict()['username'], request.form.to_dict()['id']))
+
+
+@app.route('/album_songs', methods=["POST"])
+def album_songs():
+    return jsonify(get_album_songs(request.form.to_dict()['username'], request.form.to_dict()['id']))
 
 
 if __name__ == '__main__':

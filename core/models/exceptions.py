@@ -16,3 +16,7 @@ class TrackDoesNotExists(Exception):
 
 class UserNotAllowedToAddMoreTracksToPlaylist(Exception):
     pass
+
+
+class UsernameDoesNotExist(Exception):
+    pass
