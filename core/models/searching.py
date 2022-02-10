@@ -2,7 +2,7 @@ from operator import itemgetter
 
 from core.config import PATHS, FREE, AUDIO_FEATURES
 from core.models.exceptions import MethodIsCorrupted
-from core.models.models import read
+from core.models.utils import read
 from core.models.user import get_user
 
 
@@ -65,6 +65,3 @@ def recommended_songs(user_audio_profile: dict):
 
 def get_recommended_value(track, user_audio_profile):
     return sum([abs(track['audio_profile'][audio_feature] - user_audio_profile[audio_feature]) for audio_feature in AUDIO_FEATURES])
-
-
-print(recommended_songs(r))

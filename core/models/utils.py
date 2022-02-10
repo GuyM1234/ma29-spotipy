@@ -1,5 +1,6 @@
 import os
 from core.config import PATHS, logging
+from core.models.exceptions import TrackDoesNotExist
 from core.storage.readers import json_reader
 from core.storage.writers import json_writer
 
@@ -16,7 +17,6 @@ def read(file_path: str, reader: object = json_reader) -> dict:
 
 def write(path: str, doc: dict, id_field_name='id', writer=json_writer,
           add_doc_to_collection_method=_add_doc_to_collection):
-
     doc = add_doc_to_collection_method(path, doc, id_field_name) if add_doc_to_collection_method is not None else doc
     writer(path, doc)
 
@@ -34,3 +34,10 @@ def add_audio_features():
         tracks[audio_feature.pop('id')]['audio_profile'] = audio_feature
     write(PATHS['tracks'], tracks, add_doc_to_collection_method=None)
     logging.info("Tracks updated")
+
+
+def get_track(track_id):
+    tracks = read(PATHS['tracks'])
+    if tracks.get(track_id):
+        return tracks[track_id]
+    raise TrackDoesNotExist

@@ -1,7 +1,8 @@
-from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
+from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC, \
+    STARTING_PREFERENCE, AUDIO_FEATURES
 from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
     UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist
-from core.models.models import write, read
+from core.models.utils import write, read, get_track
 
 
 def _get_user(func):
@@ -56,6 +57,7 @@ def create_playlist(user: dict, playlist_name: str):
 @_get_user
 def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
     if user['playlists'].get(playlist_name) is not None:
+        get_track()  # raises error if track does not exist
         user['playlists'][playlist_name].append(track_id)
         _update_user(user)
         logging.info('Added track successfully')
@@ -73,10 +75,29 @@ def login(username: str, password: str):
 
 
 def signup(username: str, password: str, user_type=FREE):
-    write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
+    new_user = {'username': username, 'password': password, 'type': user_type, 'playlists': {},
+                'audio_profile': _create_audio_profile()}
+    write(PATHS['users'], new_user, 'username')
+
+
+@_get_user
+def calculate_audio_profile(user: dict):
+    sum_audio_preferences = {audio_feature: 0 for audio_feature in AUDIO_FEATURES}
+    songs_number = 0
+    for playlist in user['playlists']:
+        songs_number += len(playlist)
+        for track_id in playlist:
+            for audio_feature, value in get_track(track_id)['audio_profile'].items():
+                sum_audio_preferences[audio_feature] += value
+    return {{audio_feature: value / songs_number} for audio_feature, value in sum_audio_preferences.items()}
+
+
+def _create_audio_profile():
+    return {audio_feature: STARTING_PREFERENCE for audio_feature in AUDIO_FEATURES}
 
 
 def _update_user(user: dict):
     write(PATHS['users'], user, 'username')
 
 
+print(calculate_audio_profile("g"))
