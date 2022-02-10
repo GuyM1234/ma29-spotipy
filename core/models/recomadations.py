@@ -5,10 +5,15 @@ from core.models.user import get_user
 from core.models.utils import read, get_track
 
 
-def recommended_songs(username: str, number_of_songs: int):
+def _get_recommended_value(track: dict, user_audio_profile: dict):
+    return sum([abs(track['audio_profile'][audio_feature] - user_audio_profile[audio_feature]) for audio_feature in
+                AUDIO_FEATURES]) / (track['popularity'] / 100)
+
+
+def recommended_songs(username: str, number_of_songs: int, recommendation_func=_get_recommended_value):
     tracks = read(PATHS['tracks'])
     user_audio_profile = _calculate_audio_profile(get_user(username))
-    songs = [(track['name'], track['popularity'], get_recommended_value(track, user_audio_profile)) for track in
+    songs = [(track['name'], track['popularity'], recommendation_func(track, user_audio_profile)) for track in
              tracks.values()]
     return sorted(songs, key=itemgetter(2))[0:number_of_songs]
 
@@ -24,11 +29,3 @@ def _calculate_audio_profile(user: dict):
 
     return {{audio_feature: value / songs_number} for audio_feature, value in sum_audio_preferences.items()} \
         if songs_number > 0 else DEFAULT_PREFERENCES
-
-
-def get_recommended_value(track: dict, user_audio_profile: dict):
-    return sum([abs(track['audio_profile'][audio_feature] - user_audio_profile[audio_feature]) for audio_feature in
-                AUDIO_FEATURES])
-
-
-print(recommended_songs('g', 5))
