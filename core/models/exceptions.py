@@ -10,7 +10,7 @@ class UserNotAllowedToAddMorePlaylists(Exception):
     pass
 
 
-class TrackDoesNotExists(Exception):
+class TrackDoesNotExist(Exception):
     pass
 
 

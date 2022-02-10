@@ -1,3 +1,4 @@
+#
 # from consolemenu import *
 # from consolemenu.items import *
 #
@@ -59,9 +60,9 @@
 # menu.append_item(signup_item)
 #
 # menu.show()
-import json
+
 
 import requests
 
-x = requests.post("http://192.168.1.177:5000/best_artist_songs", {"username": "Guy", "id": "4Uzm4t6wAufWqKP7ZgYLxF"})
+x = requests.post("http://192.168.1.177:5000/recommended_songs", {"username": "g", "song_number": "5"})
 print(x.text)

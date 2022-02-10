@@ -2,7 +2,7 @@ from operator import itemgetter
 
 from core.config import PATHS, FREE
 from core.models.exceptions import MethodIsCorrupted
-from core.models.models import read
+from core.models.utils import read
 from core.models.user import get_user
 
 
@@ -54,3 +54,4 @@ def user_created_searching_method(func, *args):
         return func(tracks, *args)
     except Exception:
         raise MethodIsCorrupted()
+

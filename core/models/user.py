@@ -1,7 +1,7 @@
 from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
 from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
     UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist
-from core.models.models import write, read
+from core.models.utils import write, read, get_track
 
 
 def _get_user(func):
@@ -9,9 +9,8 @@ def _get_user(func):
         if read(PATHS['users']).get(username) is not None:
             user = read(PATHS['users']).get(username)
             user['username'] = username
-        else:
-            raise UsernameDoesNotExist()
-        return func(user, *args)
+            return func(user, *args)
+        raise UsernameDoesNotExist()
 
     return wrapper
 
@@ -56,6 +55,7 @@ def create_playlist(user: dict, playlist_name: str):
 @_get_user
 def add_track_to_playlist(user: dict, playlist_name: str, track_id: str):
     if user['playlists'].get(playlist_name) is not None:
+        get_track(track_id)  # raises error if track does not exist
         user['playlists'][playlist_name].append(track_id)
         _update_user(user)
         logging.info('Added track successfully')
@@ -73,9 +73,9 @@ def login(username: str, password: str):
 
 
 def signup(username: str, password: str, user_type=FREE):
-    write(PATHS['users'], {'username': username, 'password': password, 'type': user_type, 'playlists': {}}, 'username')
+    new_user = {'username': username, 'password': password, 'type': user_type, 'playlists': {}}
+    write(PATHS['users'], new_user, 'username')
 
 
 def _update_user(user: dict):
     write(PATHS['users'], user, 'username')
-
