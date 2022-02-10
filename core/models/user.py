@@ -1,6 +1,6 @@
 from core.config import PATHS, logging, FREE, MAX_PLAYLISTS_FOR_FREE_ACC, MAX_PLAYLIST_TRACKS_FOR_FREE_ACC
-from core.models.exceptions import PlaylistsExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
-    UserNotAllowedToAddMorePlaylists, UsernameDoesNotExist, UserDoesNotExist
+from core.models.exceptions import PlaylistExists, PlaylistDoesNotExists, UserNotAllowedToAddMoreTracksToPlaylist, \
+    UserNotAllowedToAddMorePlaylists, UserDoesNotExist
 from core.models.utils import write, read, get_track
 
 
@@ -45,7 +45,7 @@ def _add_track_wrapper(func):
 def create_playlist(user: dict, playlist_name: str):
     if user['playlists'].get(playlist_name) is not None:
         logging.warning("Playlist exists")
-        raise PlaylistsExists()
+        raise PlaylistExists()
     else:
         user['playlists'][playlist_name] = []
         _update_user(user)
